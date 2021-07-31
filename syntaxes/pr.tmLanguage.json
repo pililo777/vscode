@@ -2,9 +2,15 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "Inter",
 	"patterns": [
+
+		
+		
+
 		{
 			"include": "#keywords"
-		},
+		}
+		,
+
 		{
 			"include": "#strings"
 		},
@@ -22,14 +28,36 @@
 			"include": "#variableALFA"
 		}
 
+		,
+		{
+			"include": "#commentLine"
+		}
+
+		,
+		{
+			"include": "#commentBlock"
+		}
+
+		,
+		{
+			"include": "#Operadores"
+		}
+
+
+ 
+
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.pr",
-				"match": "\\b(si|mientras|para|retornar|desde|fin|proc|procedimiento|funcion|circulo|ventana|vaciar|dim|imprimir|llamar|hasta|push|pop|entonces|si-fin|terminar|sino|instr|subcadena|izquierda|derecha|largo|stop)\\b"
+				"match": "\\b(si|mientras|para|retornar|desde|fin|proc|procedimiento|funcion|circulo|ventana|vaciar|dim|imprimir|llamar|hasta|push|pop|entonces|si-fin|terminar|sino|instr|subcadena|izquierda|derecha|largo|stop|chkregex)\\b"
 			}]
 		},
+
+		
+		
+
 		"strings": {
 			"name": "string.quoted.double.pr",
 			"begin": "'",
@@ -55,8 +83,35 @@
 			"name": "variableALFA.pr",
 				"match":  "[A-Z0-9_]+"
 		}
+		,
 
-		
+		"commentLine" : {
+			"name": "commentLine.pr",
+			"match": "//.*"
+		}
+		,
+
+		"commentBlock" : {
+			"name": "commentBlock.pr",
+			"begin" : "(/\\*)",
+			"end" : "(\\*/)",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pr",
+					"match": "\\\\."
+				}
+			]
+		  }
+
+		  ,
+		  "Operadores": {
+			  "name": "operadores.pr",
+			  "match": "\\*|=|\\+|\\-|\\>|\\<|\\/|\\{|\\}|\\(|\\)"
+		  }
+
+
+
+
 	},
 	"scopeName": "source.pr"
 }

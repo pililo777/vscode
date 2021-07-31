@@ -1,10 +1,19 @@
 {
     "name": "pr",
-    "displayName": "pr",
-    "description": "pr",
+    "displayName": "lenguaje interpretado",
+    "description": "lenguaje interpretado",
     "version": "0.0.1",
+    "publisher": "RubenRivero",
+    "author": {
+        "email": "pililo222@gmail.com",
+        "name": "Ruben Rivero"
+    },
     "engines": {
         "vscode": "^1.58.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pililo777/lenguaje-interpretado.git"
     },
     "categories": [
         "Programming Languages"
