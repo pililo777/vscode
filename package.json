@@ -1,0 +1,25 @@
+{
+    "name": "pr",
+    "displayName": "pr",
+    "description": "pr",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.58.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pr",
+            "aliases": ["Inter", "pr"],
+            "extensions": [".pr"],
+            "configuration": "./syntaxes/language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pr",
+            "scopeName": "source.pr",
+            "path": "./syntaxes/pr.tmLanguage.json"
+        }]
+    }
+}

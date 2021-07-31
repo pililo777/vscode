@@ -1,0 +1,62 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Inter",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#digito"
+		}
+
+		,
+		{
+			"include": "#variable"
+		}
+
+		,
+		{
+			"include": "#variableALFA"
+		}
+
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.pr",
+				"match": "\\b(si|mientras|para|retornar|desde|fin|proc|procedimiento|funcion|circulo|ventana|vaciar|dim|imprimir|llamar|hasta|push|pop|entonces|si-fin|terminar|sino|instr|subcadena|izquierda|derecha|largo|stop)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.pr",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pr",
+					"match": "\\\\."
+				}
+			]
+		},
+		"digito": {
+			"name": "digit.pr",
+			"match": "[0-9]+"
+		} ,
+
+		"variable" :     { 
+			"name": "variable.pr",
+				"match":  "[a-z0-9_]+"
+		},
+
+		"variableALFA" :     { 
+			"name": "variableALFA.pr",
+				"match":  "[A-Z0-9_]+"
+		}
+
+		
+	},
+	"scopeName": "source.pr"
+}
